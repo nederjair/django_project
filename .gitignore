@@ -1,27 +1,28 @@
 # latex ignores
-english/dj_install_en/*.aux
-english/dj_install_en/*.log
-english/dj_install_en/*.fdb_latexmk
-english/dj_install_en/*.fls
-english/dj_install_en/*.synctex.gz
+manuals/latex_en/dj_install_en/*.aux
+manuals/latex_en/dj_install_en/*.log
+manuals/latex_en/dj_install_en/*.fdb_latexmk
+manuals/latex_en/dj_install_en/*.fls
+manuals/latex_en/dj_install_en/*.synctex.gz
 
-english/py_install_en/*.aux
-english/py_install_en/*.log
-english/py_install_en/*.fdb_latexmk
-english/py_install_en/*.fls
-english/py_install_en/*.synctex.gz
+manuals/latex_en/py_install_en/*.aux
+manuals/latex_en/py_install_en/*.log
+manuals/latex_en/py_install_en/*.fdb_latexmk
+manuals/latex_en/py_install_en/*.fls
+manuals/latex_en/py_install_en/*.synctex.gz
 
-russian/dj_install_ru/*.aux
-russian/dj_install_ru/*.log
-russian/dj_install_ru/*.fdb_latexmk
-russian/dj_install_ru/*.fls
-russian/dj_install_ru/*.synctex.gz
+manuals/latex_ru/dj_install_ru/*.aux
+manuals/latex_ru/dj_install_ru/*.log
+manuals/latex_ru/dj_install_ru/*.fdb_latexmk
+manuals/latex_ru/dj_install_ru/*.fls
+manuals/latex_ru/dj_install_ru/*.synctex.gz
 
-russian/py_install_ru/*.aux
-russian/py_install_ru/*.log
-russian/py_install_ru/*.fdb_latexmk
-russian/py_install_ru/*.fls
-russian/py_install_ru/*.synctex.gz
+manuals/latex_ru/py_install_ru/*.aux
+manuals/latex_ru/py_install_ru/*.log
+manuals/latex_ru/py_install_ru/*.fdb_latexmk
+manuals/latex_ru/py_install_ru/*.fls
+manuals/latex_ru/py_install_ru/*.synctex.gz
+
 # venv ignores
 my_env/*
 !my_env/my_site_root

@@ -1,0 +1,194 @@
+\documentclass[12pt]{article}
+
+%%%%%%%%%%%%PACKAGES%%%%%%%%%%%%%%
+\usepackage[top=2cm,bottom=2cm, right = 1cm, left = 1.5cm]{geometry}
+\usepackage{fancyhdr}
+
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{tempora}% bold titles and nice style
+\usepackage{graphicx}%%%allow inserting images
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{float}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%preambules%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}%clear all the footnotes
+\fancyhead[L]{\slshape\MakeUppercase{Django Installation}}
+\fancyhead[R]{\slshape{Neder Mendez}}
+\fancyfoot[C]{\thepage}%set the notes as the page number
+\setlength{\parskip}{0.5em} %lenght between paragrahs
+\renewcommand{\baselinestretch}{1.2}%spacing between lines
+\parindent 0ex %remove the espace of the first line in every paragraph
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%custom colors%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0.1,0.7,0.1}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.7,0,0.98}
+\definecolor{codemagenta}{rgb}{1,0,1}
+\definecolor{backcolour}{rgb}{1,1,1}
+\definecolor{aqua}{rgb}{0.0, 1.0, 1.0}
+\definecolor{myyellow}{rgb}{0.9, 0.9, 0.0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%listing styles%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{listings}
+
+\lstdefinestyle{conlst}{
+	morekeywords={[1] .py},
+	keywordstyle={ [1]\color{orange} },
+	basicstyle=\Large\ttfamily,
+	commentstyle=\color{gray} \emph,
+	stringstyle=\ttfamily,
+	backgroundcolor=\color{backcolour},
+	stringstyle=\color{codegreen},
+	showspaces=false,
+	showtabs=false,
+	breaklines=true,
+	showstringspaces=false,
+	breakatwhitespace=true,
+	upquote=true,
+	frame=tblr,
+	escapechar =@,
+	columns=fullflexible
+	%aboveskip=20pt,
+	%belowskip=20pt
+	}
+
+\lstdefinestyle{pylst}{
+	language=Python,
+	morekeywords={[1] None, True, False},
+	morekeywords={[2] __init__, __name__},
+	morekeywords={[3] self},
+	basicstyle=\Large\ttfamily,
+	keywordstyle={[1]\color{blue}},
+	keywordstyle={[2]\color{codemagenta}},
+	keywordstyle={[3]\color{codepurple}},
+	keywordstyle={[4]\color{codegreen}},
+	commentstyle=\color{codegreen} \emph,
+	%stringstyle=\ttfamily,
+	numbers=left,
+	numberstyle=\small, 
+	stepnumber=1, 
+	numbersep=5pt,
+	backgroundcolor=\color{backcolour},
+	stringstyle=\color{orange},
+	showspaces=false,
+	showtabs=false,
+	breaklines=true,
+	showstringspaces=false,
+	breakatwhitespace=true,
+	upquote=true,
+	frame=tblr,
+	escapechar =@,
+	columns=fullflexible,
+	%aboveskip=20pt,
+	%belowskip=20pt
+	}
+
+\lstset{literate=%
+   *{0}{{{\color{codegreen}0}}}1
+    {1}{{{\color{codegreen}1}}}1
+    {2}{{{\color{codegreen}2}}}1
+    {3}{{{\color{codegreen}3}}}1
+    {4}{{{\color{codegreen}4}}}1
+    {5}{{{\color{codegreen}5}}}1
+    {6}{{{\color{codegreen}6}}}1
+    {7}{{{\color{codegreen}7}}}1
+    {8}{{{\color{codegreen}8}}}1
+    {9}{{{\color{codegreen}9}}}1
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\setcounter{page}{1}%set this page as the first page
+\section{Requirements}
+\begin{enumerate}
+	\item Windows operative system
+	\item Python installed and working on console (see the manual for python installation).
+\end{enumerate}
+
+\section{Virtual enviroment creation}
+You can create your virtual enviroment wherever you want, however is recomended to create it in a folder or place 
+that is easy to find, for that we will use the desktop.
+
+	\begin{enumerate}
+		\item Open the console and write: 
+		
+			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
+cd Desktop
+			\end{lstlisting}
+
+		\item Create the virtual enviroment: 
+
+			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
+python -m venv my_venv
+			\end{lstlisting}
+
+	\end{enumerate}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ,keepaspectratio]{imgs/venv.png}
+		\caption{}
+	\end{figure}
+
+\section{Activate the virtual enviroment}
+	before installing django the just created virtual enviroment has to be activated.
+
+	\begin{enumerate}
+		\item enter the just created folder (my\_venv)
+
+			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
+cd my_venv
+			\end{lstlisting}
+
+		\item type the activation command:
+
+			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
+Scripts\activate
+			\end{lstlisting}
+
+	\end{enumerate}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width =0.6\textwidth ,keepaspectratio]{imgs/activate_venv.png}
+		\caption{}
+	\end{figure}
+
+\section{Install Django}
+
+	\begin{enumerate}
+		\item type the installation command
+
+			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
+pip install django
+			\end{lstlisting}
+
+		\item check django is successfully installed
+
+			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
+pip list
+			\end{lstlisting}
+
+	\end{enumerate}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width =1\textwidth ,keepaspectratio]{imgs/install_dj.png}
+		\caption{}
+	\end{figure}
+
+\end{document}
