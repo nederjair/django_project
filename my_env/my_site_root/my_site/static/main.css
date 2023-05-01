@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+/* header styles */
+header {
+  color: white;
+  /*background:  url('logo_blue.svg') no-repeat left center;*/
+  background-color: #0e6c27;
+  background-size: auto; 
+  text-align: center;
+  height: 20em;
+  font-family: monospace;
+  border-radius: 25px;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.5em;
+  color: #f7a579;
+}
+/*navigation styles*/
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li{
+  display: block;
+  border: 3px solid;
+  border-radius: 0.5em;
+  padding: 1.0em 2.0em;
+  margin: 1.5em;
+  font-size: .8em;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  color: #56b6c4;
+  font-size: 1.2em;
+}
+nav ul li a{
+  color: #ffffff;
+}
+/*titles style*/
+h1 {
+text-transform: uppercase;
+    font-family: monospace;
+    color: #000000;
+    text-align: center;
+}
+h2 {
+color:  #6f3096;
+text-transform: uppercase;
+border-top: 1px solid;
+border-left: 3px solid;
+padding-left: 1em;
+}
+
+/*footer style*/
+footer {
+background-color: #0e1c6c;
+color: #56b6c4;
+text-align: center;
+padding: 1em;
+border-radius: 10px;
+}
+body{
+  font-family: monospace;
+  font-size: 100%;
+  background-color: #f7a579;
+}
+main {
+
+  background-color: white;
+  font-family: monospace;
+  color: #0e1c6c;
+  padding: 1em;
+  border: double 4px black;
+  border-radius: 25px;
+
+}
