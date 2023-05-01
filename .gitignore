@@ -46,6 +46,7 @@ my_env/my_site_root/pages/*
 my_env/my_site_root/myApp/*
 !my_env/my_site_root/myApp/templates/
 !my_env/my_site_root/myApp/admin.py
+!my_env/my_site_root/myApp/forms.py
 !my_env/my_site_root/myApp/models.py
 !my_env/my_site_root/myApp/urls.py
 !my_env/my_site_root/myApp/views.py
