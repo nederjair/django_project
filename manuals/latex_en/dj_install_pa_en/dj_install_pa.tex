@@ -115,120 +115,101 @@
 \setcounter{page}{1}%set this page as the first page
 \section{Requirements}
 \begin{enumerate}
-	\item Windows operative system
-	\item Python installed and working on console (see the manual for python installation).
+	\item internet conection
+  \item an internet browser
 \end{enumerate}
 
+\section{Account creation}
+	\begin{enumerate}
+    \item go to the next link:
+			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
+      https://www.pythonanywhere.com/pricing/
+			\end{lstlisting}
+
+    \item push the button "create a beginner account"
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ,keepaspectratio]{imgs/create_beginner_account.png}
+		\caption{}
+	\end{figure}
+
+    \item fill all the necesary information and push "register". Please follow the recomendations:
+      \begin{itemize}
+        \item you MUST have access to the email you use in your registration 
+        \item remember your username and password, you will need them later
+          \end{itemize}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ,keepaspectratio]{imgs/fill_reg_info.png}
+		\caption{}
+	\end{figure}
+	\end{enumerate}
 \section{Virtual enviroment creation}
-You can create your virtual enviroment wherever you want, however is recomended to create it in a folder or place that is easy to find (you must remember the location that you chose for you virtual enviroment). I will use the desktop.
 
 	\begin{enumerate}
-    \item get the list of files and directories (folders) that exist in the current directory
+    \item open a terminal
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ,keepaspectratio]{imgs/open_terminal.png}
+		\caption{}
+	\end{figure}
+
+    \item verify you have python installed
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
-		\item Open the command line and write: 
-		
+      python --version
+			\end{lstlisting}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ,keepaspectratio]{imgs/verify_py_version.png}
+		\caption{}
+	\end{figure}
+
+    \item create the virtual enviroment
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
-cd Desktop
+python -m venv djangoEnv
 			\end{lstlisting}
-
-		\item Create the virtual enviroment: 
-
-			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
-python -m venv my_venv
-			\end{lstlisting}
-
-	\end{enumerate}
-
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.6\textwidth ,keepaspectratio]{imgs/venv.png}
+		\includegraphics[width=0.6\textwidth ,keepaspectratio]{imgs/create_venv.png}
 		\caption{}
 	\end{figure}
 
-\section{Activate the virtual enviroment}
-	before installing django the just created virtual enviroment has to be activated.
+    \item check that the  new virtual enviroment was created
+			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
+      ls -1
+			\end{lstlisting}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\textwidth ,keepaspectratio]{imgs/check_venv_creation.png}
+		\caption{}
+	\end{figure}
+	\end{enumerate}
 
+\section{Django installation}
 	\begin{enumerate}
-		\item enter the just created folder (my\_venv)
-
-			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
-cd my_venv
+    \item enter to the virtual enviroment folder
+			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
+      cd djangoEnv/
 			\end{lstlisting}
-
-		\item type the activation command:
-
-			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
-Scripts\activate
-			\end{lstlisting}
-
-	\end{enumerate}
-
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width =0.6\textwidth ,keepaspectratio]{imgs/activate_venv.png}
+		\includegraphics[width=0.6\textwidth ,keepaspectratio]{imgs/enter_venv_folder.png}
 		\caption{}
 	\end{figure}
+	\end{enumerate}
+  
 
-\section{Install Django}
-
+\section{Virtual enviroment creation}
 	\begin{enumerate}
-		\item type the installation command
-
-			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
-pip install django
+    \item
+			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
+python -m venv djangoEnv
 			\end{lstlisting}
-
-		\item check django is successfully installed
-
-			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
-pip list
-			\end{lstlisting}
-
-	\end{enumerate}
-
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width =1\textwidth ,keepaspectratio]{imgs/install_dj.png}
+		\includegraphics[width=0.6\textwidth ,keepaspectratio]{imgs/check_venv_creation.png}
 		\caption{}
 	\end{figure}
-
-\section{Check the just installed django}
-
-	\begin{enumerate}
-    \item start a new project (write your name where "studentName" is written)
-
-			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:createDjProj}]
-      django-admin startproject siteStudentName
-			\end{lstlisting}
-
-		\item create a database
-
-			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
-      python manage.py migrate
-			\end{lstlisting}
-		\item run the development webserver
-
-			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
-      python manage.py runserver
-			\end{lstlisting}
-    \item write the next direction into the browser and press enter:
-
-			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
-      http\\:127.0.0.1:8000
-			\end{lstlisting}
-
-    \item check that the default django page appears
-
-			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:create_venv}]
-      http\\:127.0.0.1:8000
-			\end{lstlisting}
-
 	\end{enumerate}
-
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width =1\textwidth ,keepaspectratio]{imgs/install_dj.png}
-		\caption{}
-	\end{figure}
-
 \end{document}

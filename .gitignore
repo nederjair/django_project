@@ -5,6 +5,12 @@ manuals/latex_en/dj_install_en/*.fdb_latexmk
 manuals/latex_en/dj_install_en/*.fls
 manuals/latex_en/dj_install_en/*.synctex.gz
 
+manuals/latex_en/dj_install_pa_en/*.aux
+manuals/latex_en/dj_install_pa_en/*.log
+manuals/latex_en/dj_install_pa_en/*.fdb_latexmk
+manuals/latex_en/dj_install_pa_en/*.fls
+manuals/latex_en/dj_install_pa_en/*.synctex.gz
+
 manuals/latex_en/py_install_en/*.aux
 manuals/latex_en/py_install_en/*.log
 manuals/latex_en/py_install_en/*.fdb_latexmk
