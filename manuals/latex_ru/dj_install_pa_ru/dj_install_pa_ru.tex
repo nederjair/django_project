@@ -19,8 +19,8 @@
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}%clear all the footnotes
-\fancyhead[L]{\slshape\MakeUppercase{Django Installation}}
-\fancyhead[R]{\slshape{Neder Mendez}}
+\fancyhead[L]{\slshape\MakeUppercase{РУДН}}
+\fancyhead[R]{\slshape{python}}
 \fancyfoot[C]{\thepage}%set the notes as the page number
 \setlength{\parskip}{0.5em} %lenght between paragrahs
 \renewcommand{\baselinestretch}{1.2}%spacing between lines
@@ -110,34 +110,34 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{document}
+\tableofcontents
+\newpage
 \setcounter{page}{1}%set this page as the first page
-\section{Requirements}
+\section{Требования}
 \begin{enumerate}
-	\item internet conection
-  \item an internet browser
+	\item подключение к интернету
+  \item интернет браузер
 \end{enumerate}
 
-\section{Account creation}
+\section{Создание учетной записи в pythonAnyWhere}
 	\begin{enumerate}
-    \item go to the next link:
-			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
+    \item перейдите по следующей ссылке:
+      \begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       https://www.pythonanywhere.com/pricing/
 			\end{lstlisting}
 
-    \item push the button "create a beginner account"
-
+    \item нажмите кнопку «create a beginner account»
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.8\textwidth ,keepaspectratio]{imgs/create_beginner_account.png}
 		\caption{}
 	\end{figure}
 
-    \item fill all the necesary information and push "register". Please follow the recomendations:
+    \item заполните всю необходимую информацию и нажмите «register». Пожалуйста, следуйте рекомендациям:
       \begin{itemize}
-        \item you MUST have access to the email you use in your registration 
-        \item remember your username and password, you will need them later
+        \item вы ДОЛЖНЫ иметь доступ к электронной почте, которую вы используете при регистрации.
+        \item запомните свое имя пользователя и пароль, они понадобятся вам позже.
           \end{itemize}
 	\begin{figure}[H]
 		\centering
@@ -145,17 +145,17 @@
 		\caption{}
 	\end{figure}
 	\end{enumerate}
-\section{Virtual enviroment creation}
+\section{Создание виртуальной среды}
 
 	\begin{enumerate}
-    \item open a terminal
+    \item открыть терминал
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=1.0\textwidth ,keepaspectratio]{imgs/open_terminal.png}
 		\caption{}
 	\end{figure}
 
-    \item verify you have python installed
+    \item убедитесь, что у вас установлен python
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       python --version
 			\end{lstlisting}
@@ -165,7 +165,7 @@
 		\caption{}
 	\end{figure}
 
-    \item create the virtual enviroment
+    \item создать виртуальную среду
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
 python -m venv djangoEnv
 			\end{lstlisting}
@@ -175,7 +175,7 @@ python -m venv djangoEnv
 		\caption{}
 	\end{figure}
 
-    \item check that the new virtual enviroment was created
+    \item убедитесь, что новая виртуальная среда создана
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       ls -1
 			\end{lstlisting}
@@ -186,9 +186,9 @@ python -m venv djangoEnv
 	\end{figure}
 	\end{enumerate}
 
-\section{Django installation}
+\section{Установка django}
 	\begin{enumerate}
-    \item enter to the virtual enviroment folder
+    \item войти в папку виртуальной среды
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       cd djangoEnv/
 			\end{lstlisting}
@@ -198,7 +198,7 @@ python -m venv djangoEnv
 		\caption{}
 	\end{figure}
 
-    \item activate the virtual enviroment
+    \item активировать виртуальную среду
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       source bin/activate
 			\end{lstlisting}
@@ -208,7 +208,7 @@ python -m venv djangoEnv
 		\caption{}
 	\end{figure}
 
-    \item install Django
+    \item установить django
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       pip install django
 			\end{lstlisting}
@@ -218,13 +218,23 @@ python -m venv djangoEnv
 		\caption{}
 	\end{figure}
 
-    \item check django is installed
+    \item проверьте, установлен ли django
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       pip list
 			\end{lstlisting}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\textwidth ,keepaspectratio]{imgs/check_django_installation.png}
+		\caption{}
+	\end{figure}
+
+    \item выйти из терминала
+			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
+      exit
+			\end{lstlisting}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{imgs/exit_terminal.png}
 		\caption{}
 	\end{figure}
 	\end{enumerate}

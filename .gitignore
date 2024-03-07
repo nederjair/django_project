@@ -23,6 +23,13 @@ manuals/latex_ru/dj_install_ru/*.fdb_latexmk
 manuals/latex_ru/dj_install_ru/*.fls
 manuals/latex_ru/dj_install_ru/*.synctex.gz
 
+manuals/latex_ru/dj_install_pa_ru/*.aux
+manuals/latex_ru/dj_install_pa_ru/*.log
+manuals/latex_ru/dj_install_pa_ru/*.fdb_latexmk
+manuals/latex_ru/dj_install_pa_ru/*.fls
+manuals/latex_ru/dj_install_pa_ru/*.synctex.gz
+manuals/latex_ru/dj_install_pa_ru/*.toc
+
 manuals/latex_ru/py_install_ru/*.aux
 manuals/latex_ru/py_install_ru/*.log
 manuals/latex_ru/py_install_ru/*.fdb_latexmk
