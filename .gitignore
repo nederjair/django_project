@@ -30,6 +30,20 @@ manuals/latex_ru/dj_install_pa_ru/*.fls
 manuals/latex_ru/dj_install_pa_ru/*.synctex.gz
 manuals/latex_ru/dj_install_pa_ru/*.toc
 
+manuals/latex_ru/create_dj_project_ru/*.aux
+manuals/latex_ru/create_dj_project_ru/*.log
+manuals/latex_ru/create_dj_project_ru/*.fdb_latexmk
+manuals/latex_ru/create_dj_project_ru/*.fls
+manuals/latex_ru/create_dj_project_ru/*.synctex.gz
+manuals/latex_ru/create_dj_project_ru/*.toc
+
+manuals/latex_ru/publish_site_ru/*.aux
+manuals/latex_ru/publish_site_ru/*.log
+manuals/latex_ru/publish_site_ru/*.fdb_latexmk
+manuals/latex_ru/publish_site_ru/*.fls
+manuals/latex_ru/publish_site_ru/*.synctex.gz
+manuals/latex_ru/publish_site_ru/*.toc
+
 manuals/latex_ru/py_install_ru/*.aux
 manuals/latex_ru/py_install_ru/*.log
 manuals/latex_ru/py_install_ru/*.fdb_latexmk
