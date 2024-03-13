@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 
 %%%%%%%%%%%%PACKAGES%%%%%%%%%%%%%%
-\usepackage[top=2cm,bottom=2cm, right = 1cm, left = 1.5cm]{geometry}
+\usepackage[top=2cm,bottom=2cm, right = 1cm, left = 2.5cm]{geometry}
 \usepackage{fancyhdr}
 
 \usepackage[T2A]{fontenc}
@@ -119,7 +119,9 @@
 	\item подключение к интернету
   \item интернет браузер
 \end{enumerate}
+
 \section{получить путь к проекту django}
+
     \subsection{ войти в папку виртуальной среды}
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       cd djangoEnv/
@@ -129,6 +131,7 @@
 		\includegraphics[width=0.4\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/enter_venv_folder.png}
 		\caption{}
 	\end{figure}
+
     \subsection{войдите в папку <<websiteRoot>>}
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       cd websiteRoot
@@ -138,6 +141,7 @@
 		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/enter_websiteRoot.png}
 		\caption{}
 	\end{figure}
+
     \subsection{получить путь к папке <<websiteRoot>>}
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       pwd
@@ -154,12 +158,14 @@
 		\includegraphics[width=0.4\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/highlight_root_path.png}
 		\caption{}
 	\end{figure}
+
   \subsection{вставьте путь, который вы только что скопировали, в текстовый файл, чтобы не потерять его}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.4\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/path_libreoffice.png}
 		\caption{}
 	\end{figure}
+
     \subsection{ выйти из терминала}
 			\begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       exit
@@ -170,16 +176,20 @@
 		\caption{}
 	\end{figure}
 \section{создать веб-приложение в pythonAnywhere}
+
+
     \subsection{ перейдите на следующий веб-сайт и войдите в систему, используя свои учетные данные}
       \begin{lstlisting}[caption=\phantom{},style=conlst,label={lst:enter_desktop}]
       https://www.pythonanywhere.com/
 			\end{lstlisting}
+
     \subsection{нажмите на <<open web tab>>}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/open_web_tab.png}
 		\caption{}
 	\end{figure}
+
     \subsection{нажмите на <<add new web app>> и потом нажмите <<next>>}
 	\begin{figure}[H]
 		\centering
@@ -191,12 +201,14 @@
 		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/webapp_domain_name.png}
 		\caption{}
 	\end{figure}
+
   \subsection{выберите платформу веб-приложения как <<manual configuration>>}
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/webapp_framework_selection.png}
 		\caption{}
 	\end{figure}
+
   \subsection{выберите версию python для использования в веб-приложении (должна соответствовать версии python виртуальной среды). выберите python 3.10 и потом нажмите <<next>>}
 	\begin{figure}[H]
 		\centering
@@ -208,6 +220,7 @@
 		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/manual_config_next.png}
 		\caption{}
 	\end{figure}
+
   \subsection{проверьте, появляется следующая страница}
 	\begin{figure}[H]
 		\centering
@@ -215,6 +228,7 @@
 		\caption{}
 	\end{figure}
   \section{настроить веб-приложение в pythonAnywhere}
+
   \subsection{зайти в раздел <<virtualEnv>> и вставьте путь, который вы скопировали перед удалением <<websiteRoot>> с пути. и нажмите на галочку.}
 	\begin{figure}[H]
 		\centering
@@ -226,5 +240,109 @@
 		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/virtual_env_path2.png}
 		\caption{}
 	\end{figure}
-  /home/dpoiarudn/djangoEnv/websiteRoot
+
+  \subsection{перейти к файлу конфигурации веб-сервера}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/wsgi_path.png}
+		\caption{}
+	\end{figure}
+
+
+
+  \subsection{удалите строки, показанные на рисунке (с 19 по 47) и сохраните изменения.
+  Примечание: номера строк, показанные на рисунке, могут отличаться от номеров строк в вашем файле.}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/delete_lines_wsgi.png}
+		\caption{}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/delete_lines_wsgi2.png}
+		\caption{}
+	\end{figure}
+
+
+  \subsection{раскомментируйте (удалите хештег) строки, показанные на рисунке (48, 49,53,54,55,57,60,61).
+  Примечание: номера строк, показанные на рисунке, могут отличаться от номеров строк в вашем файле.}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/uncomment_wsgi.png}
+		\caption{}
+	\end{figure}
+
+  \subsection{отредактируйте части, показанные на рисунке, сначала отредактируйте путь (строка 53 на рисунке), вставив путь к папке <<websiteRoot>>, который вы получили ранее. затем измените имя папки, в которой находится модуль <<settings>> (строка 57), на имя <<website>>. затем сохраните изменения.}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/edit_wsgi.png}
+		\caption{}
+	\end{figure}
+
+  \subsection{перейдите в раздел <<web>>}
+
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/go_to_web.png}
+		\caption{}
+	\end{figure}
+
+  \subsection{скопируйте имя вашего сайта (домена)}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/copy_domain_name.png}
+		\caption{}
+	\end{figure}
+
+  \subsection{перейдите в раздел <<files>>, затем перейдите в папку <<djangoEnv>>, затем перейдите в папку <<websiteRoot>>, затем перейдите в папку <<website>>, затем откройте <<settings.py>> файл.}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/go_to_files.png}
+		\caption{}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/go_to_djangoEnv.png}
+		\caption{}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/go_to_websiteRoot.png}
+		\caption{}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/go_to_website.png}
+		\caption{}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/open_settings_file.png}
+		\caption{}
+	\end{figure}
+  \subsection{добавьте имя вашего сайта в настройку <<ALLOWED\_HOSTS>>}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/add_allowed_host.png}
+		\caption{}
+	\end{figure}
+  \subsection{перезагрузите свой домен}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/reload_domain.png}
+		\caption{}
+	\end{figure}
+  \subsection{зайди на свой сайт и проверь, работает ли он}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/go_to_your_site.png}
+		\caption{}
+	\end{figure}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.3\textwidth ,keepaspectratio]{~/django_project/manuals/imgs/site_sucsess.png}
+		\caption{}
+	\end{figure}
 \end{document}
