@@ -3,33 +3,20 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Untitled Doc</title> 
+    <title>
+    {% block title %} 
+    {{ title }}
+    {% endblock title %} 
+</title> 
   </head>
   <body>
-    <h1>руководства по разработке веб-сайтов с помощью Django</h1>
-    <h2>Часть 1</h2>
+
     <ol>
-      <li>Создайте учетную запись на pythonAnywhere.com</li>
-      <li>install django</li>
-      <li>open an account in pythonAnywhere</li>
-      <li>open an account in pythonAnywhere</li>
-      <li>open an account in pythonAnywhere</li>
+      {% block main_nav %}
+      {% endblock main_nav %}
     </ol> 
-    <h2>Часть 2</h2>
-    <ol>
-      <li>open an account in pythonAnywhere</li>
-      <li>install django</li>
-      <li>open an account in pythonAnywhere</li>
-      <li>open an account in pythonAnywhere</li>
-      <li>open an account in pythonAnywhere</li>
-    </ol> 
-    <h2>Часть 3</h2>
-    <ol>
-      <li>open an account in pythonAnywhere</li>
-      <li>install django</li>
-      <li>open an account in pythonAnywhere</li>
-      <li>open an account in pythonAnywhere</li>
-      <li>open an account in pythonAnywhere</li>
-    </ol> 
+    {% block content %} 
+    {{ content }}
+    {% endblock content %} 
   </body> 
 </html>
